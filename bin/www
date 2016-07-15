@@ -1,0 +1,14 @@
+/*
+#Connect to  node node server
+*/
+
+var env = process.env.NODE_ENV || 'development';
+var config = require('./config')[env];
+module.exports = function(app, http) {
+  var port = process.env.PORT || config.app_port;
+  app.set('port', port);
+  app.set('env', env);
+  var server = http.createServer(app);
+  console.info("Node is listening to port: " + port);
+  server.listen(port);
+}
