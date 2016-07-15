@@ -10,11 +10,12 @@ The signature - It is a cryptographic signature
 
 
 Usage:
+-----
 
 jwt.sign(payload, secretOrPrivateKey, options, [callback])
 
 payload:
-
+--------
 {
     _id: "adnasdaasdjasdh",
     name: "dinesh rawat",
@@ -22,6 +23,7 @@ payload:
 }
 
 secretOrPrivateKey:
+---------
 
 It could be anything that is used to make a hash
 ex:-
@@ -29,6 +31,7 @@ ex:-
 "mysupersecretkey"
 
 options:
+---------
 
 algorithm (default: HS256)
 expiresIn: expressed in seconds or a string describing a time span rauchg/ms. Eg: 60, "2 days", "10h", "7d"
